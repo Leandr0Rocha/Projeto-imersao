@@ -1,3 +1,14 @@
+window.onload = function () {
+    const section = document.getElementById("resultados-pesquisa");
+    section.innerHTML = `
+        <div class="mensagem-boas-vindas">
+            <h2>Bem-vindo à Roda Literária!</h2>
+            <br>
+            <p>Explore nossa biblioteca de clássicos da literatura mundial. Use a barra de pesquisa acima para encontrar livros pelo título, autor ou tema.</p>
+        </div>
+    `;
+};
+
 function pesquisar() {
     let section = document.getElementById("resultados-pesquisa")
 
@@ -26,6 +37,7 @@ function pesquisar() {
             </div>
             <div class="texto">
                 <h2>${dado.titulo}</h2>
+                <p class="editora">Editora: ${dado.editora}</p>
                 <p class="descricao-meta">${dado.descricao}</p>
                 <a href=${dado.link} target="_blank">Leia aqui</a>
             </div>
@@ -40,3 +52,40 @@ function pesquisar() {
 
     section.innerHTML = resultados
 }
+
+function filtrarPorGenero(genero) {
+    const section = document.getElementById("resultados-pesquisa");
+    let resultados = "";
+
+    for (let dado of dados) {
+        if (dado.tags.includes(genero)) {
+            resultados += `
+                <div class="item-resultado">
+                    <div class="foto">
+                        <img src="${dado.imagem}" alt="Capa do livro">
+                    </div>
+                    <div class="texto">
+                        <h2>${dado.titulo}</h2>
+                        <p class="editora">Editora: ${dado.editora}</p>
+                        <p class="descricao-meta">${dado.descricao}</p>
+                        <a href="${dado.link}" target="_blank">Leia aqui</a>
+                    </div>
+                </div>
+            `;
+        }
+    }
+
+    if (!resultados) {
+        resultados = "<p>Nenhum resultado encontrado para este gênero.</p>";
+    }
+
+    section.innerHTML = resultados;
+}
+
+document.querySelectorAll(".navbar-list a").forEach(link => {
+    link.addEventListener("click", function (event) {
+        event.preventDefault();
+        const genero = this.getAttribute("data-filter");
+        filtrarPorGenero(genero);
+    });
+});
