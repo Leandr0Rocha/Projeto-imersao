@@ -1,6 +1,6 @@
 # Roda Literária: Sua Biblioteca Virtual de Clássicos
 
-![image](https://github.com/user-attachments/assets/74cc533e-1013-400c-979e-bf70911d7e6e)
+![image](https://github.com/user-attachments/assets/53f9094a-54f3-4169-abec-8bee364bc834)
 
 
 Esse projeto foi realizado durante as cinco aulas da "Imersão Dev com Google Gemini" realizada pela Alura e pela Google, e apresentada pelos profissionais Guilherme Lima, Rafaella Ballerini e Luciano Martins. Os assuntos abordados foram criação de páginas web com HTML, estilização com CSS, lógica de programação com JavaScript, engenharia de prompts com Google Gemini, além da integração entre todas essas tecnologias. Gostei muito da experiência e acho que meu resultado ficou alinhado com a proposta.
