@@ -38,6 +38,3 @@ Contribuições são bem-vindas! Para contribuir com este projeto, siga estes pa
 2. Crie um novo branch para sua feature.
 3. Faça suas alterações e commit.
 4. Envie um pull request.
-
-## Licença
-Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes. 1
